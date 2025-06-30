@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Retro Shop</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>My Retro Shop</h1>
+    <div id="lang-switcher">
+      <button onclick="setLang('en')">EN</button>
+      <button onclick="setLang('cz')">CZ</button>
+      <button onclick="setLang('ru')">RU</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="catalog"></section>
+
+    <section class="cart">
+      <h2>🧺 <span data-i18n="cart">Cart</span></h2>
+      <div class="cart-items"></div>
+      <p><strong>💳 <span data-i18n="payment">Payment:</span></strong></p>
+      <button class="pay-btn">USDT</button>
+      <button class="pay-btn">TON</button>
+    </section>
+
+    <section>
+      <h2>💰 How to pay with TON or USDT:</h2>
+      <ol>
+        <li><strong>Add products</strong> to your cart</li>
+        <li><strong>Choose a payment method</strong> (TON or USDT)</li>
+        <li><strong>Send the exact amount</strong> to the wallet address shown on the screen</li>
+        <li>Click the <strong>“Payment Sent”</strong> button after transfer</li>
+        <li>Wait for <strong>operator confirmation</strong> via Telegram</li>
+      </ol>
+
+      <h2>💱 How to buy TON or USDT:</h2>
+      <p>You can buy crypto via exchange apps like <strong>Binance</strong>, <strong>Bybit</strong>, or <strong>Telegram Wallet</strong>.<br />
+      Use a bank card or P2P to get crypto and transfer it to the wallet shown on the site.</p>
+    </section>
+
+    <section>
+      <h2>📞 <span data-i18n="contact">Contact</span></h2>
+      <p>For any questions write to <strong>@MisterrrA</strong> on Telegram</p>
+    </section>
+  </main>
+
+  <footer>© 2025 Retro Shop</footer>
+</body>
+</html>
