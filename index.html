@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Minimal Shop</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 id="title">🛍️ Minimal Shop</h1>
+        <nav>
+            <button onclick="showSection('catalog')">🛒 <span data-i18n="catalog">Catalog</span></button>
+            <button onclick="showSection('info')">ℹ️ <span data-i18n="info">Info</span></button>
+            <button onclick="showSection('contact')">📞 <span data-i18n="contact">Contact</span></button>
+        </nav>
+        <div id="lang-switch">
+            <button onclick="setLang('en')">EN</button>
+            <button onclick="setLang('ru')">RU</button>
+            <button onclick="setLang('cz')">CZ</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="catalog" class="visible">
+            <div class="grid" id="products"></div>
+
+            <div id="cart">
+                <h2 data-i18n="cart">🧺 Cart</h2>
+                <ul id="cart-items"></ul>
+                <p id="total"></p>
+                <div id="payment" style="display:none;">
+                    <h3 data-i18n="pay_with">💳 Payment:</h3>
+                    <button onclick="showWallet('USDT')">USDT</button>
+                    <button onclick="showWallet('TON')">TON</button>
+                    <div id="wallet-info" style="margin-top:10px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="info" class="hidden">
+            <h2 data-i18n="info">ℹ️ Info</h2>
+            <div id="payment-guide"></div>
+        </section>
+
+        <section id="contact" class="hidden">
+            <h2 data-i18n="contact">📞 Contact</h2>
+            <p><span data-i18n="contact_us">Write us:</span> <b>@MisterrrA</b></p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
