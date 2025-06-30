@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Retro Webshop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="language-toggle">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('cz')">CZ</button>
+      <button onclick="setLanguage('ru')">RU</button>
+    </div>
+    <h1 id="shop-title">My Retro Shop</h1>
+  </header>
+
+  <main>
+    <section id="catalog" class="section">
+      <h2 id="catalog-title">Catalog</h2>
+      <div id="product-list"></div>
+    </section>
+
+    <section id="cart" class="section">
+      <h2 id="cart-title">🧺 Cart</h2>
+      <ul id="cart-items"></ul>
+      <p id="total"></p>
+      <div id="payment-section">
+        <h3 id="payment-title">💳 Payment:</h3>
+        <button onclick="pay('usdt')">USDT</button>
+        <button onclick="pay('ton')">TON</button>
+      </div>
+      <div id="contact-input" style="display:none;">
+        <label for="contact" id="contact-label">Your Telegram contact:</label>
+        <input type="text" id="contact" />
+        <button onclick="confirmPayment()">Payment Sent</button>
+      </div>
+    </section>
+
+    <section id="info" class="section">
+      <h2 id="info-title">ℹ️ How to Pay</h2>
+      <div id="info-text-en" class="payment-guide hidden">
+
+<h3>💰 How to pay with TON or USDT:</h3>
+<ol>
+  <li><strong>Add products</strong> to your cart</li>
+  <li><strong>Choose a payment method</strong> (TON or USDT)</li>
+  <li><strong>Send the exact amount</strong> to the wallet address shown on the screen</li>
+  <li>Click the <strong>“Payment Sent”</strong> button after transfer</li>
+  <li>Wait for <strong>operator confirmation</strong> via Telegram</li>
+</ol>
+<h3>💱 How to buy TON or USDT:</h3>
+<p>You can purchase cryptocurrency easily using mobile apps or websites:</p>
+<ul>
+  <li>✅ <strong>Telegram Wallet</strong> – simple and integrated in Telegram</li>
+  <li>✅ <strong>Binance</strong> or <strong>Bybit</strong> – large and trusted exchanges</li>
+  <li>✅ <strong>Trust Wallet</strong> or <strong>Tonkeeper</strong> – convenient mobile apps</li>
+</ul>
+<p><strong>Payment methods available:</strong><br>
+ 💳 Bank cards, Apple Pay, Google Pay<br>
+ 🔁 <strong>P2P (peer-to-peer)</strong> – buy directly from other users with local payment options</p>
+<p>Once purchased, <strong>send TON or USDT</strong> to the wallet address displayed on the website during checkout.</p>
+
+</div>
+<div id="info-text-ru" class="payment-guide hidden">
+
+<h3>💰 Как оплатить TON или USDT:</h3>
+<ol>
+  <li><strong>Добавьте товары</strong> в корзину</li>
+  <li><strong>Выберите способ оплаты</strong> (TON или USDT)</li>
+  <li><strong>Переведите точную сумму</strong> на указанный адрес</li>
+  <li>Нажмите <strong>«Платёж отправлен»</strong> после перевода</li>
+  <li>Ожидайте <strong>связи с оператором</strong> в Telegram</li>
+</ol>
+<h3>💱 Как купить TON или USDT:</h3>
+<p>Купить криптовалюту можно через приложения или сайты:</p>
+<ul>
+  <li>✅ <strong>Telegram Wallet</strong> – встроен в Telegram</li>
+  <li>✅ <strong>Binance</strong> или <strong>Bybit</strong> – популярные криптобиржи</li>
+  <li>✅ <strong>Trust Wallet</strong> или <strong>Tonkeeper</strong> – мобильные кошельки</li>
+</ul>
+<p><strong>Способы оплаты:</strong><br>
+ 💳 Банковские карты, Apple Pay, Google Pay<br>
+ 🔁 <strong>P2P</strong> – покупка у других пользователей с местными способами оплаты</p>
+<p>После покупки переведите TON или USDT на адрес, указанный на сайте при оформлении заказа.</p>
+
+</div>
+<div id="info-text-cz" class="payment-guide hidden">
+
+<h3>💰 Jak zaplatit TON nebo USDT:</h3>
+<ol>
+  <li><strong>Přidejte produkty</strong> do košíku</li>
+  <li><strong>Vyberte metodu platby</strong> (TON nebo USDT)</li>
+  <li><strong>Pošlete přesnou částku</strong> na uvedenou adresu</li>
+  <li>Po převodu klikněte na <strong>„Platba odeslána“</strong></li>
+  <li>Počkejte na <strong>potvrzení operátorem</strong> přes Telegram</li>
+</ol>
+<h3>💱 Jak koupit TON nebo USDT:</h3>
+<p>Jednoduše koupíte kryptoměnu pomocí těchto aplikací nebo webů:</p>
+<ul>
+  <li>✅ <strong>Telegram Wallet</strong> – snadno použitelný, přímo v Telegramu</li>
+  <li>✅ <strong>Binance</strong> nebo <strong>Bybit</strong> – známé kryptoburzy</li>
+  <li>✅ <strong>Trust Wallet</strong> nebo <strong>Tonkeeper</strong> – mobilní peněženky</li>
+</ul>
+<p><strong>Dostupné způsoby platby:</strong><br>
+ 💳 Platební karty, Apple Pay, Google Pay<br>
+ 🔁 <strong>P2P</strong> – nákup od jiných uživatelů s lokálními možnostmi</p>
+<p>Po zakoupení pošlete TON nebo USDT na adresu zobrazenou při platbě na webu.</p>
+
+</div>
+
+    </section>
+
+    <section id="contact-section" class="section">
+      <h2 id="contact-title">📞 Contact</h2>
+      <p id="contact-text">For any questions write to <strong>@MisterrrA</strong> on Telegram</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Retro Shop</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
