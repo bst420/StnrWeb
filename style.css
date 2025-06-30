@@ -1,0 +1,88 @@
+
+body {
+  margin: 0;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  background: radial-gradient(circle at top left, #ffe8b3 0%, #ffcc99 100%);
+  color: #333;
+}
+
+header {
+  background-color: #ff6b5c;
+  color: white;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.lang-buttons {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.lang-buttons button {
+  background-color: #ffc107;
+  border: none;
+  border-radius: 8px;
+  margin-left: 5px;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+}
+
+.section {
+  background-color: #fff7e6;
+  border-radius: 12px;
+  margin: 1.5rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.product {
+  background-color: #fff3c4;
+  border: 3px solid #ff9f1c;
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  border: 2px solid #ffa94d;
+}
+
+button.add-to-cart {
+  background-color: #f25c54;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button.add-to-cart:hover {
+  background-color: #df4b45;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 1rem;
+  background-color: #ff6b5c;
+  color: white;
+  margin-top: 2rem;
+}
